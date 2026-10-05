@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A music-themed webpage featuring an embedded YouTube video and an interactive JavaScript animation."
+    />
+    <title>Sound in Motion | My Favourite Song</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-glow page-glow-one" aria-hidden="true"></div>
+    <div class="page-glow page-glow-two" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Sound in Motion home">
+        <span class="brand-mark" aria-hidden="true">♪</span>
+        <span>Sound in Motion</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#song">The song</a>
+        <a href="#animation">Animation</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">A song worth replaying</p>
+        <h1 id="hero-title">Music can turn an ordinary moment into a memory.</h1>
+        <p class="hero-copy">
+          This page celebrates a favourite song through video, colour, and motion.
+          Press play, then try the interactive record animation below.
+        </p>
+        <a class="primary-button" href="#song">Listen now <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section class="song-card" id="song" aria-labelledby="song-title">
+        <div class="song-intro">
+          <p class="section-number">01 / Favourite song</p>
+          <h2 id="song-title">Invincible</h2>
+          <p class="artist">DEAF KEV</p>
+          <p>
+            This energetic electronic track has a driving beat and an uplifting,
+            determined sound. It is the kind of song that adds momentum to a study
+            session or makes a challenging day feel more manageable.
+          </p>
+        </div>
+
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/J2X5mJ3HDYE?rel=0"
+            title="Invincible by DEAF KEV on YouTube"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="animation-section" id="animation" aria-labelledby="animation-title">
+        <div class="section-heading">
+          <p class="section-number">02 / JavaScript animation</p>
+          <h2 id="animation-title">Send the record across the stage</h2>
+          <p>
+            The record moves, spins, and bounces using JavaScript. Use the controls
+            to pause it, restart it, or reverse its direction.
+          </p>
+        </div>
+
+        <div class="animation-stage" id="animationStage">
+          <div class="trail" aria-hidden="true"></div>
+          <div class="record" id="record" role="img" aria-label="Animated vinyl record">
+            <div class="record-ring"></div>
+            <div class="record-label">PLAY</div>
+          </div>
+        </div>
+
+        <div class="controls" aria-label="Animation controls">
+          <button class="control-button" id="pauseButton" type="button">Pause</button>
+          <button class="control-button" id="restartButton" type="button">Restart</button>
+          <button class="control-button secondary" id="directionButton" type="button">
+            Reverse direction
+          </button>
+        </div>
+        <p class="status" id="animationStatus" aria-live="polite">Animation is playing.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Created for the Visual Studio final assignment · <span id="year"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
