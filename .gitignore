@@ -1,0 +1,17 @@
+## Visual Studio user files
+.vs/
+*.user
+*.suo
+
+## Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+
+## Visual Studio Code
+.vscode/
+
+## Operating system files
+.DS_Store
+Thumbs.db
